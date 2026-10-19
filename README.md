@@ -17,7 +17,7 @@ macOS and iOS builds are not published here; they require Xcode.
 
 ## Verifying downloads
 
-Each release includes a `SHA256SUMS` file:
+The Android, Windows and companion releases include a `SHA256SUMS` file:
 
 ```sh
 sha256sum -c SHA256SUMS
