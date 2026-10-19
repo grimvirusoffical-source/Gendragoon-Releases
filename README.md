@@ -1,37 +1,41 @@
 # GenDragoon Releases
 
-Pre-release builds of the GenDragoon Cloud SSD clients. Every build here is a **test build**: unsigned, not distributed through any app store, and not yet verified on real devices. Use them for evaluation only.
+Pre-release builds of GenDragoon Cloud SSD. Source code: [gendragoon-cloud-ssd](https://github.com/grimvirusoffical-source/gendragoon-cloud-ssd).
 
-Source code lives in the [gendragoon-cloud-ssd](https://github.com/grimvirusoffical-source/gendragoon-cloud-ssd) repository.
+Every build here is a **test build** for evaluation. Nothing is signed for distribution or published through an app store.
 
-## Downloads
+## Current release
 
-| Release | Platform | Asset | Status |
-|---|---|---|---|
-| [android-v0.17.0-build20-debug](https://github.com/grimvirusoffical-source/Gendragoon-Releases/releases/tag/android-v0.17.0-build20-debug) | Android 8.0+ (API 26) | `GenDragoon-Android-0.17.0-build20-debug.apk` | Debug-signed APK. Builds successfully; not yet installed on a device or emulator. Not suitable for Google Play. |
-| [windows-x64-v0.1.0-unpacked](https://github.com/grimvirusoffical-source/Gendragoon-Releases/releases/tag/windows-x64-v0.1.0-unpacked) | Windows 10/11 x64 | `GenDragoon-Cloud-SSD-Windows-x64-unpacked-0.1.0.zip` | Unpacked Electron app, unsigned. No installer yet. Not yet run on Windows. |
-| [desktop-companion-windows-linux-source-ce5665f](https://github.com/grimvirusoffical-source/Gendragoon-Releases/releases/tag/desktop-companion-windows-linux-source-ce5665f) | Windows and Linux | `GenDragoon-Desktop-Companion-Windows-Linux-source.zip` | Command-line companion (Python 3.11+ source). 36 unit tests pass on Linux; the Windows path has not been run. |
-| [audit-patches-2026-10-19](https://github.com/grimvirusoffical-source/Gendragoon-Releases/releases/tag/audit-patches-2026-10-19) | Developers | two `.patch` files | Test-only patches that make two timestamp-based tests deterministic. |
+[all-platforms-2026-10-19](https://github.com/grimvirusoffical-source/Gendragoon-Releases/releases/tag/all-platforms-2026-10-19)
 
-macOS and iOS builds are not published here; they require Xcode.
+| Platform | Files | Signing |
+|---|---|---|
+| Windows 10/11 x64 | Unpacked desktop app (`.zip`) | Unsigned |
+| Linux x64 | AppImage, `.deb`, `.tar.gz` | Unsigned |
+| Windows and Linux | Command-line companion (Python source) | Not applicable |
+| Android 8.0+ | Debug APK for sideloading; release AAB | APK debug key only; AAB unsigned |
+| Chrome, Edge, Opera, Firefox | Browser extension zips (0.2.0) | Unsigned |
 
-## Verifying downloads
+macOS and iOS builds are not published here yet. The release notes list what has and has not been tested.
 
-Each release includes a `SHA256SUMS` file for its assets:
+Earlier pre-releases (Android debug APK, Windows unpacked app, desktop companion) are kept for reference and are superseded by the current release.
+
+## Verify a download
+
+Each release includes `SHA256SUMS`:
 
 ```sh
 sha256sum -c SHA256SUMS
 ```
 
-## Installing
+## Install
 
-* **Android:** enable installation from unknown sources and open the APK. The app uses a debug signing key.
-* **Windows:** unzip and run `GenDragoon Cloud SSD.exe`. Windows SmartScreen will warn because the build is unsigned. The app was built without a cloud API address, so it starts in local-preview mode and does not connect to the cloud backend.
-* **Companion (Windows and Linux):** unzip, then run `sh install-linux.sh` or `install-windows.ps1`. See the README inside the archive.
-* **Patches:** apply with `git am` on top of commit `ce5665f` of `gendragoon-cloud-ssd`.
+- **Windows:** unzip and run `GenDragoon Cloud SSD.exe`. SmartScreen warns because the build is unsigned.
+- **Linux:** `chmod +x` the AppImage and run it, or install the `.deb` with `sudo apt install ./<file>.deb`.
+- **Android:** allow installation from unknown sources and open the APK.
+- **Companion:** unzip, then run `sh install-linux.sh` or `install-windows.ps1`.
+- **Browser extensions:** for local testing, unzip and load the folder as an unpacked extension (Chrome, Edge, Opera) or as a temporary add-on (Firefox).
 
-## Known limitations
+## Support
 
-* None of these builds are signed for distribution.
-* The Android and Windows apps have not been run on real devices.
-* The Windows build is an unpacked folder; the installer is produced by the source repository's CI job and is not included.
+Contact: support@example.com (placeholder)
