@@ -8,10 +8,10 @@ Source code lives in the [gendragoon-cloud-ssd](https://github.com/grimvirusoffi
 
 | Release | Platform | Asset | Status |
 |---|---|---|---|
-| [android-v0.17.0-build20-debug](../../releases/tag/android-v0.17.0-build20-debug) | Android 8.0+ (API 26) | `GenDragoon-Android-0.17.0-build20-debug.apk` | Debug-signed APK. Builds successfully; not yet installed on a device or emulator. Not suitable for Google Play. |
-| [windows-x64-v0.1.0-unpacked](../../releases/tag/windows-x64-v0.1.0-unpacked) | Windows 10/11 x64 | `GenDragoon-Cloud-SSD-Windows-x64-unpacked-0.1.0.zip` | Unpacked Electron app, unsigned. No installer yet. Not yet run on Windows. |
-| [desktop-companion-windows-linux-source-ce5665f](../../releases/tag/desktop-companion-windows-linux-source-ce5665f) | Windows and Linux | `GenDragoon-Desktop-Companion-Windows-Linux-source.zip` | Command-line companion (Python 3.11+ source). 36 unit tests pass on Linux; the Windows path has not been run. |
-| [audit-patches-2026-10-19](../../releases/tag/audit-patches-2026-10-19) | Developers | two `.patch` files | Test-only patches that make two timestamp-based tests deterministic. |
+| [android-v0.17.0-build20-debug](https://github.com/grimvirusoffical-source/Gendragoon-Releases/releases/tag/android-v0.17.0-build20-debug) | Android 8.0+ (API 26) | `GenDragoon-Android-0.17.0-build20-debug.apk` | Debug-signed APK. Builds successfully; not yet installed on a device or emulator. Not suitable for Google Play. |
+| [windows-x64-v0.1.0-unpacked](https://github.com/grimvirusoffical-source/Gendragoon-Releases/releases/tag/windows-x64-v0.1.0-unpacked) | Windows 10/11 x64 | `GenDragoon-Cloud-SSD-Windows-x64-unpacked-0.1.0.zip` | Unpacked Electron app, unsigned. No installer yet. Not yet run on Windows. |
+| [desktop-companion-windows-linux-source-ce5665f](https://github.com/grimvirusoffical-source/Gendragoon-Releases/releases/tag/desktop-companion-windows-linux-source-ce5665f) | Windows and Linux | `GenDragoon-Desktop-Companion-Windows-Linux-source.zip` | Command-line companion (Python 3.11+ source). 36 unit tests pass on Linux; the Windows path has not been run. |
+| [audit-patches-2026-10-19](https://github.com/grimvirusoffical-source/Gendragoon-Releases/releases/tag/audit-patches-2026-10-19) | Developers | two `.patch` files | Test-only patches that make two timestamp-based tests deterministic. |
 
 macOS and iOS builds are not published here; they require Xcode.
 
@@ -35,4 +35,3 @@ sha256sum -c SHA256SUMS
 * None of these builds are signed for distribution.
 * The Android and Windows apps have not been run on real devices.
 * The Windows build is an unpacked folder; the installer is produced by the source repository's CI job and is not included.
-* The deployed backend does not yet provide account deletion, which the App Store requires.
